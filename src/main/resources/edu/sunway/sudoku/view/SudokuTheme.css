@@ -1,0 +1,88 @@
+.buttonDefaultStyle {
+    -fx-text-fill: grey;
+    -fx-background-color: white;
+    -fx-border-color: gray;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5px;
+    -fx-font-size: 24px;
+    -fx-font-family: Georgia;
+}
+
+.buttonDefaultStyle:hover {
+    -fx-text-fill: royalblue;
+    -fx-background-color: gainsboro;
+}
+
+.buttonMainMenuStyle {
+    -fx-text-fill: black;
+    -fx-background-color: transparent;
+    -fx-font-weight: bold;
+    -fx-font-size: 36px;
+    -fx-font-family: Georgia;
+}
+
+.buttonMainMenuStyle:hover {
+    -fx-text-fill: royalblue;
+}
+
+.choice-box {
+    -fx-text-fill: grey;
+    -fx-background-color: white;
+    -fx-border-color: gray;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5px;
+    -fx-font-size: 14pt;
+    -fx-font-family: Georgia;
+}
+
+#title {
+    -fx-text-fill: royalblue;
+    -fx-font-size: 48px;
+    -fx-font-family: Georgia;
+    -fx-text-alignment: center;
+}
+
+#timerLabel {
+    -fx-font-size: 36px;
+}
+
+.subtitle {
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+    -fx-font-family: Georgia;
+    -fx-font-style: italic;
+    -fx-text-alignment: center;
+}
+
+.header {
+    -fx-text-fill: royalblue;
+    -fx-font-size: 28px;
+    -fx-font-family: Georgia;
+    -fx-text-alignment: center;
+}
+
+#header {
+    -fx-text-fill: royalblue;
+    -fx-font-size: 28px;
+    -fx-font-family: Georgia;
+    -fx-text-alignment: center;
+}
+
+.label {
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+    -fx-font-family: Georgia;
+    -fx-text-alignment: justify;
+}
+
+.labeledText {
+    -fx-text-fill: black;
+    -fx-font-size: 18px;
+    -fx-font-family: Georgia;
+}
+
+.profileText {
+    -fx-text-fill: royalblue;
+    -fx-font-size: 18px;
+    -fx-font-family: Georgia;
+}

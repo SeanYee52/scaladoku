@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@SudokuTheme.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.sunway.sudoku.controllers.HowToPlayDialogController">
+   <bottom>
+      <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <buttons>
+            <Button fx:id="exitButton" alignment="CENTER" cancelButton="true" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleExitButton" prefWidth="150.0" styleClass="buttonDefaultStyle" text="Exit" textAlignment="CENTER">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font></Button>
+        </buttons>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </ButtonBar>
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox fx:id="normalSudokuText" alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+               <children>
+                  <Label lineSpacing="2.0" styleClass="defaultText" text="The goal of Sudoku is to fill in a 9×9 grid with digits so that each column, row, and 3×3 section contain the numbers between 1 to 9. At the beginning of the game, the 9×9 grid will have some of the squares filled in. Your job is to use logic to fill in the missing digits and complete the grid. Don’t forget, a move is incorrect if:" textAlignment="JUSTIFY" wrapText="true">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Georgia" size="14.0" />
+                     </font></Label>
+                  <Label styleClass="defaultText" text="- Any row contains more than one of the same number from 1 to 9">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Georgia" size="14.0" />
+                     </font></Label>
+                  <Label styleClass="defaultText" text="- Any column contains more than one of the same number from 1 to 9">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Georgia" size="14.0" />
+                     </font></Label>
+                  <Label styleClass="defaultText" text="- Any 3×3 grid contains more than one of the same number from 1 to 9">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Georgia" size="14.0" />
+                     </font></Label>
+               </children></VBox>
+            <VBox fx:id="killerSudokuText" alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" visible="false" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+               <children>
+                  <Label lineSpacing="2.0" styleClass="defaultText" text="In Killer Sudoku there’s a new concept of a “cage” – a group of cells within a dotted line that make up a sum shown as a small number above. Like in Sudoku, your ultimate goal is to fill the grid with numbers, while paying attention to ”the sum rule”. Let’s review Killer Sudoku rules in detail below." textAlignment="JUSTIFY" wrapText="true">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Georgia" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label styleClass="defaultText" text="- Fill all rows, columns, and 3x3 blocks with numbers 1-9 exactly like in classic sudoku.">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Georgia" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label styleClass="defaultText" text="- Pay attention to the cages – groups of cells indicated by dotted lines.">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Georgia" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label styleClass="defaultText" text="- Make sure the sum of numbers in each cage is equal to the red number in the upper left corner of the cage." wrapText="true">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Georgia" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label styleClass="defaultText" text="- Numbers cannot repeat within cages, a single row, column, or 3x3 region.">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Georgia" size="14.0" />
+                     </font>
+                  </Label>
+               </children></VBox>
+            <VBox fx:id="offsetSudokuText" alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" visible="false" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+               <children>
+                  <Label lineSpacing="2.0" text="Offset sudoku is one of the rarer variants of Sudoku. This variant introduces nine extra coloured regions to the standard sudoku puzzle which stipulates that each row, column and 3 x 3 box must contain 1 - 9 once only. In addition in offset sudoku, the first number in all nine puzzles must also be unique, and so on for the second, third... ninth numbers in each box. The rules are as follows:" wrapText="true">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="- Any row, column, 3x3 subgrid, and coloured region must not contain repeat numbers" wrapText="true">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="- There are NO highlighting provided in the board (or else it will be too easy)" wrapText="true">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+               </children></VBox>
+            <VBox fx:id="diagonalSudokuText" alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" visible="false" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+               <children>
+                  <Label lineSpacing="2.0" text="Diagonal sudoku is another variant of the classic Sudoku puzzle. Alongside with the usual row, columns, and 3x3 subgrid rules, there is an additional rule where the main diagonal (the longest diagonal in the board) must not contain repeat numbers. You can use this to your advantage! But be warned, the puzzle has been adjusted to make it balanced. The rules of the puzzle are the same as the normal Sudoku puzzle, with the added diagonal rule." wrapText="true">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+               </children></VBox>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="header" alignment="CENTER" styleClass="header" text="How to Play?" textFill="ROYALBLUE">
+               <font>
+                  <Font name="Georgia" size="28.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <ChoiceBox fx:id="selectPuzzleBox" prefWidth="250.0" styleClass="combo-box">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </ChoiceBox>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>

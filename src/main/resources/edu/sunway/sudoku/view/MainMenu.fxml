@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="mainMenu" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" stylesheets="@SudokuTheme.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.sunway.sudoku.controllers.MainMenuController">
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="newGameLayer">
+               <graphic>
+                  <Button fx:id="newGameButton" onAction="#handleNewGame" styleClass="buttonMainMenuStyle" stylesheets="@SudokuTheme.css" text="New Game">
+                     <font>
+                        <Font name="Georgia" size="36.0" />
+                     </font>
+                  </Button>
+               </graphic>
+            </Label>
+            <Button fx:id="profileButton" styleClass="buttonMainMenuStyle" stylesheets="@SudokuTheme.css" text="Load Profile">
+               <font>
+                  <Font name="Georgia" size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="tutorialButton" onAction="#handleTutorial" styleClass="buttonMainMenuStyle" stylesheets="@SudokuTheme.css" text="How to Play?">
+               <font>
+                  <Font name="Georgia" size="36.0" />
+               </font>
+            </Button>
+            <Button onAction="#handleLeaderboard" styleClass="buttonMainMenuStyle" stylesheets="@SudokuTheme.css" text="Leaderboard">
+               <font>
+                  <Font name="Georgia" size="36.0" />
+               </font></Button>
+            <Button fx:id="exitButton" onAction="#handleExit" styleClass="buttonMainMenuStyle" stylesheets="@SudokuTheme.css" text="Exit">
+               <font>
+                  <Font name="Georgia" size="36.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <VBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="title" alignment="CENTER" styleClass="title" text="Welcome to Scaladoku" textAlignment="CENTER" textFill="ROYALBLUE">
+               <font>
+                  <Font name="Georgia" size="48.0" />
+               </font>
+            </Label>
+            <Label fx:id="subtitle" alignment="CENTER" styleClass="subtitle" text="A program made in Scala which has 4 different sudoku puzzle" textAlignment="CENTER">
+               <font>
+                  <Font name="Georgia Italic" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>
